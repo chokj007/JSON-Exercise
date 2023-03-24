@@ -1,0 +1,19 @@
+
+The code will define an array (JSON data) which will hold the content that will be cycled through. 
+
+    It will also define a variable that will keep track of the current index in the array, and a displayElement variable which refers to the HTML element that will display the content.
+
+An event listener is added to the displayElement that listens for clicks 
+    When the element is clicked, the variable is incremented, wrapping around to 0 (when needed)
+
+The display element is then updated with the new content using the innerHTML property.
+
+
+At the botton, the user will be able to cycle through certain categories. Using if statements, images will be yielded. 
+
+<!-- "This 'vehicle', in 'location', is in 'color'; with this 'line' written on it" -->
+
+if "vehicle=truck"
+    display 
+        'image 1, image 5, image 6" 
+
