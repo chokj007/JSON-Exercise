@@ -9,7 +9,7 @@ An event listener is added to the displayElement that listens for clicks
 The display element is then updated with the new content using the innerHTML property.
 
 
-At the botton, the user will be able to cycle through certain categories. Using if statements, images will be yielded. 
+At the botton, the user will be able to search through certain categories. Using if statements, images will be yielded. 
 
 <!-- "This 'vehicle', in 'location', is in 'color'; with this 'line' written on it" -->
 
