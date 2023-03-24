@@ -6,34 +6,29 @@ const renderItems = (collection) => {
 
 	// Loop through each item in the collection array
 	collection.forEach(item => {
-		const listItem = document.createElement('li') // Make the `li`
+		const listItem = document.createElement('div') // Make the `div`
 
 
 		// You can make each element inside of that…
 		const itemTitle = document.createElement('h2') // Make an `h2`
-		itemTitle.innerHTML = item.title // Put the JSON title inside
-		listItem.appendChild(itemTitle) // And add it to the `li`!
+		itemTitle.innerHTML = item.written_content // Put the JSON title inside 
+		listItem.appendChild(itemwritten_content) // And add it to the `li`!
 
 		const itemImage = document.createElement('img') // And an image
-		itemImage.src = item.posterImage // Set the `src` attribute from the JSON
-		listItem.appendChild(itemImage) // And add that too
+		itemImage.src = item.image // Set the `src` attribute from the JSON
+		listItem.appendChild(itemimage) // And add that too
 
 
 		// This can get annoying, so we can use “template literals” instead
 		const itemDetails =
 			`
-				<p>Released in <time>${item.year}</time></p>
-				<p><em>${item.runTime}</em></p>
-				<a href="${item.imdbLink}">
-					<p>${item.imdbRating} / 10 →</p>
+				<p>Vehicle from>${item.location}</in India</p>
+				<p><em>${item.color}</em></p>
+				<p>Translates to: ${item.translation} </p>
+				<p>Language ${item.language} </p>
 				</a>
 			`
 		listItem.insertAdjacentHTML('beforeend', itemDetails) // Which can we then insert
-
-		// You can build logic from your data, too
-		if (!item.alsoWriter) { // If this is `false`
-			listItem.classList.add('faded') // Add this class to the whole `li`
-		}
 
 		collectionList.appendChild(listItem) // Then add the whole `li` into the `ul`
 	})
