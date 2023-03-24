@@ -1,3 +1,4 @@
+
 // Function to render your items
 const renderItems = (collection) => {
 	// The `ul` where the items will be inserted
