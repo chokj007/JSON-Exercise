@@ -22,13 +22,13 @@ a { color: blue; }
 
 em { font-style: italic }
 
-ul {
+section {
 	display: grid;
 	gap: calc(4 * var(--spacing));
 	margin-top: calc(4 * var(--spacing));
 }
 
-li {
+div {
 	display: grid;
 	gap: var(--spacing);
 }

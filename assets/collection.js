@@ -11,30 +11,30 @@ const renderItems = (collection) => {
 
 		// You can make each element inside of that…
 		const itemTitle = document.createElement('h2') // Make an `h2`
-		itemTitle.innerHTML = item.written_content // Put the JSON title inside 
-		listItem.appendChild(itemwritten_content) // And add it to the `li`!
+		itemTitle.innerHTML = item.written_content // Put the JSON title inside
+		listItem.appendChild(itemTitle) // And add it to the `li`!
 
-		const itemImage = document.createElement('img') // And an image
-		itemImage.src = item.image // Set the `src` attribute from the JSON
-		listItem.appendChild(itemimage) // And add that too
+		// const itemImage = document.createElement('img') // And an image
+		// itemImage.src = item.image// Set the `src` attribute from the JSON
+		// listItem.appendChild(itemImage) // And add that too
 
 
 		// This can get annoying, so we can use “template literals” instead
 		const itemDetails =
 			`
-				<p>Vehicle from>${item.location}</in India</p>
-				<p><em>${item.color}</em></p>
-				<p>Translates to: ${item.translation} </p>
-				<p>Language ${item.language} </p>
-				</a>
+				<p>Translation: ${item.translation}</p>
+				<p>Location: ${item.location}</p>
+				<p>Type of vehicle: ${item.type_of_vehicle}</p>
+				<p><em>${item.colors}</em></p>
+
 			`
 		listItem.insertAdjacentHTML('beforeend', itemDetails) // Which can we then insert
+
+		
 
 		collectionList.appendChild(listItem) // Then add the whole `li` into the `ul`
 	})
 }
-
-
 
 // Fetch gets your JSON file…
 fetch('assets/collection.json')
@@ -43,3 +43,15 @@ fetch('assets/collection.json')
 		// And passes the data to the function, above!
 		renderItems(collection.reverse()) // In reverse order
 	})
+
+
+	let rockArray = ['Limestone', 'Granite', 'Obsidian', 'Quartz', 'Argillite', 'Sandstone', 'Pumice'];
+
+	for (let i = 0; i < rockArray.length; i++) {
+	  console.log(rockArray[i]);
+	  
+	  if (rockArray[i] == 'Limestone') {
+		let limestoneDiv = document.getElementById('limestone');
+		limestoneDiv.innerHTML += '<p>' + rockArray[i] + '</p>';
+	  }
+	}
