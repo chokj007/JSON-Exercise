@@ -15,9 +15,9 @@ const renderItems = (collection) => {
 		itemTitle.innerHTML = item.written_content // Put the JSON title inside
 		listItem.appendChild(itemTitle) // And add it to the `li`!
 
-		// const itemImage = document.createElement('img') // And an image
-		// itemImage.src = item.image// Set the `src` attribute from the JSON
-		// listItem.appendChild(itemImage) // And add that too
+		const itemImage = document.createElement('img') // And an image
+		itemImage.src = item.image// Set the `src` attribute from the JSON
+		listItem.appendChild(itemImage) // And add that too
 
 
 		// This can get annoying, so we can use “template literals” instead
